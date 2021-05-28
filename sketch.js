@@ -7,6 +7,7 @@ var distance = 0;
 var database;
 var silver,gold,bronze;
 var form, player, game;
+var carSound;
 
 var cars, car1, car2, car3, car4;
 
@@ -23,6 +24,7 @@ function preload(){
   silver = loadImage("../images/silver.png");
   bronze = loadImage("../images/bronze.png");
   racebg = loadImage("../images/racebg.jpg");
+  carSound = loadSound("../images/car.mp3")
 }
 
 function setup(){
@@ -39,6 +41,7 @@ function draw(){
   
   if(playerCount === 4){
     game.update(1);
+    
   }
   if(gameState === 1){
     clear();

@@ -89,8 +89,9 @@ class Game {
 
     if(keyIsDown(UP_ARROW) && player.index !== null){
       player.distance +=10
+      carSound.play();
       player.update();
-    }
+      }
 
     if(player.distance > 4150){
       gameState = 2;

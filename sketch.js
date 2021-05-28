@@ -24,7 +24,7 @@ function preload(){
   silver = loadImage("../images/silver.png");
   bronze = loadImage("../images/bronze.png");
   racebg = loadImage("../images/racebg.jpg");
-  carSound = loadSound("../images/car.mp3")
+  carSound = loadSound("/images/car.mp3")
 }
 
 function setup(){

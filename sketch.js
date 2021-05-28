@@ -22,10 +22,12 @@ function preload(){
   gold = loadImage("../images/gold.png");
   silver = loadImage("../images/silver.png");
   bronze = loadImage("../images/bronze.png");
+  racebg = loadImage("../images/racebg.jpg");
 }
 
 function setup(){
   canvas = createCanvas(displayWidth - 20, displayHeight-30);
+  background(racebg);
   database = firebase.database();
   game = new Game();
   game.getState();
@@ -34,6 +36,7 @@ function setup(){
 
 
 function draw(){
+  
   if(playerCount === 4){
     game.update(1);
   }
@@ -47,6 +50,7 @@ function draw(){
 
   if(gameState===2 && player.rank===4){
     console.log("display Rank");
+    background(racebg);
     game.displayRank();
         }
 }
